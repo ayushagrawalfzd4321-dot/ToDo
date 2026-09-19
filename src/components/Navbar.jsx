@@ -1,8 +1,8 @@
-import React from 'react'
+
 
 const Navbar = () => {
   return (
-  <nav className='flex justify-between px-2 bg-cyan-500'>
+  <nav className='flex justify-between px-2 primary'>
     <span className='font-extrabold'>iTask</span>
     <ul className='flex gap-5'>
       <li className='cursor-pointer duration-200 transition-all hover:font-bold'>Home</li>
