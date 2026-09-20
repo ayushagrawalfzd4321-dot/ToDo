@@ -17,8 +17,15 @@ function Home() {
   
  
   const handleadd = () => {
-    settodos([...todos, { id: uuidv4(), todo, isCompleted: false }]);
-    setodo("");
+    if (todo.trim() === "") {
+      alert("Please enter a todo");
+      
+    }
+    else {
+      
+      settodos([...todos, { id: uuidv4(), todo, isCompleted: false }]);
+      setodo("");
+    }
 };
   const handleChange = (e) => {
     setodo(e.target.value);
@@ -74,11 +81,11 @@ const handlecheck = (e) => {
 
 return (
   <>
-    <div className="min-h-screen border flex flex-col">
+    
 
       <Navbar />
-
-      <div className="max-w-[90vw] mx-auto  secondary flex-1 w-full rounded-md p-2 my-10">
+<div className="flex min-h-screen flex-col">
+      <div className="max-w-[450px] mx-auto grow  flex-col   secondary  w-full rounded-md p-2 my-10">
         <div className="flex justify-center">
           <h1 className="font-black mr-5 text-lg">Add a Todo</h1>
           <input
@@ -91,7 +98,7 @@ return (
             />
           <button
             onClick={handleadd}
-            className="bg-blue-700  cursor-pointer hover:bg-blue-900 text-amber-50 px-2 py-1 font-bold rounded-md  mx-2  "
+            className="bg-cyan-700  cursor-pointer hover:bg-blue-900 text-amber-50 px-4  font-bold rounded-xl  mx-2  "
             >
             Save
           </button>
@@ -122,13 +129,13 @@ return (
                 <div className="buttons">
                   <button
                     onClick={(e) => handleedit(e, todo.id)}
-                    className="bg-blue-700 cursor-pointe  hover:bg-blue-900 text-sm text-amber-50 px-2 py-1 font-bold rounded-md   "
+                    className="bg-cyan-700 cursor-pointe  hover:bg-blue-900 text-sm text-amber-50 px-2 py-1 font-bold rounded-xl   "
                     >
                     Edit
                   </button>
                   <button
                     onClick={(e) => handledelete(e, todo.id)}
-                    className="bg-blue-700 cursor-pointer  text-amber-50 text-sm py-1 px-2 hover:bg-blue-900 font-bold rounded-md mx-1  "
+                    className="bg-cyan-900 cursor-pointer  text-amber-50 text-sm py-1 px-2 hover:bg-blue-900 font-bold rounded-xl mx-1  "
                     >
                     Delete
                   </button>
@@ -141,7 +148,7 @@ return (
       </div>
       <Footer/>
      
-          </div>
+         </div>
     </>
   );
 }
