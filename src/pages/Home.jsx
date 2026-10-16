@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import Navbar from "../components/Navbar.jsx";
-import Footer from "../components/Footer.jsx";
+
 import { v4 as uuidv4 } from "uuid";
 
 function Home() {
@@ -83,7 +82,7 @@ return (
   <>
     
 
-      <Navbar />
+      
 <div className="flex min-h-screen flex-col">
       <div className="max-w-[450px] mx-auto grow  flex-col   secondary  w-full rounded-md p-2 my-10">
         <div className="flex justify-center">
@@ -146,7 +145,7 @@ return (
 
         </div>
       </div>
-      <Footer/>
+      
      
          </div>
     </>
